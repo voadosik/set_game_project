@@ -1,5 +1,5 @@
-                                                                Set Game
-                                                            User documentation 
+                                                            #Set Game#
+                                                        #User documentation#
 
 
 
@@ -25,4 +25,4 @@ the lower left corner.
 
 9. Important: there exists a set in every shuffle.
 
-                                                            Have a nice game!
+                                                        #Have a nice game!#
