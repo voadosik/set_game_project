@@ -1,5 +1,5 @@
-                                                            #Set Game#
-                                                        #User documentation#
+<p style="text-align: center;">Set Game</p>
+<p style="text-align: center;">User Documentation</p>
 
 
 
@@ -25,4 +25,4 @@ the lower left corner.
 
 9. Important: there exists a set in every shuffle.
 
-                                                        #Have a nice game!#
+<p style="text-align: center;">Have a nice game!</p>
