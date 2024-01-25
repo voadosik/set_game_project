@@ -3,10 +3,23 @@ from tkinter import ttk
 from game import Game
 
 
-class MainWindow(tk.Tk):  # Basic window properties
+class MainWindow(tk.Tk):
+    """
+
+    Creating interface of the game, inheriting from
+    the tkinter Tk class, which is standart GUI toolkit.
+
+    """
+
     def __init__(self):
+        """
+
+        Call of the initializer of the parent class (tk.Tk)
+        and creating window geometry, title, button styles.
+
+        """
         super().__init__()
-        self.attributes('-fullscreen', True)
+        self.attributes("-fullscreen", True)
         self.title("Set!")
         self.configure(bg="darkseagreen3")
         btn_style = ttk.Style(self)
@@ -19,15 +32,20 @@ class MainWindow(tk.Tk):  # Basic window properties
         )
         self.create_widgets()
 
+    def create_widgets(self):
+        """
 
-    def create_widgets(self):  # Buttons and text
+        Creating all buttons, labels and placing them.
+
+        """
         self.game = Game(self)
         self.play_btn = ttk.Button(
-            self, text="Play", command=self.play_button_pressed, style="FancyButton.TButton"
+            self,
+            text="Play",
+            command=self.play_button_pressed,
+            style="FancyButton.TButton",
         )
         self.play_btn.place(relx=0.5, rely=0.6, anchor="center", width=300, height=150)
-
-
 
         self.quit_btn = ttk.Button(
             self, text="Quit", command=self.game.quit_game, style="FancyButton.TButton"
@@ -45,6 +63,13 @@ class MainWindow(tk.Tk):  # Basic window properties
         self.set_label.place(relx=0.5, rely=0.2, anchor="center")
 
     def play_button_pressed(self):
+        """
+
+        After click on the button Play,
+        redrawing all buttons, starting game
+        from file game.py
+
+        """
         self.set_label.destroy()
         self.quit_btn.destroy()
         self.play_btn.destroy()
@@ -53,7 +78,6 @@ class MainWindow(tk.Tk):  # Basic window properties
         )
         self.new_quit.place(relx=0.9, rely=0.9, anchor="center", width=300, height=150)
         self.game.start_game()
-
 
     def quit_game(self):
         self.destroy()
